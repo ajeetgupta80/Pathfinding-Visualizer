@@ -47,6 +47,16 @@ class Box:
             self.neighbours.append(grid[self.x][self.y-1])
         if self.y < row-1:
             self.neighbours.append(grid[self.x][self.y+1])
+        # diagnol distance 
+        if self.x >0 and self.y >0:
+            self.neighbours.append(grid[self.x-1][self.y-1])
+        if self.x <coloumn-1 and self.y>0:
+            self.neighbours.append(grid[self.x+1][self.y-1])
+        if self.x<coloumn-1 and self.y<row-1:
+            self.neighbours.append(grid[self.x+1][self.y+1])
+        if self.x>0 and self.y<row-1:
+            self.neighbours.append(grid[self.x-1][self.y+1])
+        
             
             
 #create grid 
@@ -147,13 +157,13 @@ def main():
         for i in range(coloumn):
             for j in range(row):
                 box = grid[i][j]
-                box.draw(window, (250,250,250))
+                box.draw(window, (50,50,50))
                 if box.queued:
                     box.draw(window,(200,0,0))
                 if box.visited:
-                    box.draw(window,(0,200,0))
+                    box.draw(window,(0, 128, 255))
                 if box in path:
-                    box.draw(window, (0,0,200))
+                    box.draw(window, (0, 100, 0))
                 if box.start:
                     box.draw(window,(0,200,200))
                 if box.wall:
