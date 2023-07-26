@@ -4,14 +4,15 @@ from tkinter import messagebox, Tk
 
 
 
-window_width = 500
+window_width = 1000
 window_height = 500
 
 # initializing display of required width and height 
 window = pygame.display.set_mode((window_width, window_height))
+pygame.display.set_caption('pathfinding visualization')
 
 
-coloumn = 25
+coloumn = 50
 row = 25
 
 box_width = window_width // coloumn
@@ -48,7 +49,7 @@ def main():
         for i in range(coloumn):
             for j in range(row):
                 box = grid[i][j]
-                box.draw(window, (255,255,255))
+                box.draw(window, (50,50,50))
         
         pygame.display.flip()
 
