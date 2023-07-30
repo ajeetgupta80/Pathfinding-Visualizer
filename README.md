@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 Dijkstra Pathfinding Visulaizer using BFS 
 
@@ -30,8 +30,4 @@ FOLLOW THE STEP
 ```
 
 
-=======
-# Pathfinding-Visualizer
-VIDEO Demonstration:-
-https://youtu.be/EbiTy90Vtik
->>>>>>> ac92c235a6d2b7453cad0c4dbd952fadeae1b3ea
+
