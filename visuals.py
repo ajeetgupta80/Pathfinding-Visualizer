@@ -2,8 +2,8 @@ import pygame
 import sys
 from tkinter import messagebox, Tk
 
-window_width = 1000
-window_height = 500
+window_width = 800
+window_height = 800
 
 # initializing display of required width and height 
 window = pygame.display.set_mode((window_width, window_height))
@@ -11,7 +11,7 @@ pygame.display.set_caption('pathfinding visualization')
 
 
 coloumn = 50
-row = 25
+row = 50
 
 box_width = window_width // coloumn
 box_height = window_height // row
@@ -157,7 +157,7 @@ def main():
         for i in range(coloumn):
             for j in range(row):
                 box = grid[i][j]
-                box.draw(window, (50,50,50))
+                box.draw(window, (100,100,100))
                 if box.queued:
                     box.draw(window,(200,0,0))
                 if box.visited:
@@ -167,7 +167,7 @@ def main():
                 if box.start:
                     box.draw(window,(0,200,200))
                 if box.wall:
-                    box.draw(window,(90,90,90))
+                    box.draw(window,(10,10,10))
                 if box.target:
                     box.draw(window,(200,200,0))
         
