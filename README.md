@@ -1,2 +1,3 @@
 # Pathfinding-Visualizer
-dijkstra pathfinder using simple bfs 
+VIDEO Demonstration:-
+https://youtu.be/EbiTy90Vtik
